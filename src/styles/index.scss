@@ -1,0 +1,46 @@
+@import url(./element-ui.scss);
+
+* {
+  &::-webkit-scrollbar {
+    width: 6px;
+    border-radius: 2px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background: rgba($color: #000000, $alpha: 0.4);
+  }
+}
+
+.fl-c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fl-ac {
+  display: flex;
+  align-items: center;
+}
+
+.fl-jc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fl-jb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fl-ja {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
