@@ -33,28 +33,26 @@ import { Fold } from "@element-plus/icons-vue";
 </script>
 
 <style lang="scss" scoped>
-@import "~@/styles/variables.scss";
 
 .header-layout {
-  width: 100%;
-  height: $headerHeader;
+  width: var(--g-header-width);
+  height: var(--g-header-height);
 
   box-shadow: 0 4px 16px rgba($color: #000000, $alpha: 0.08);
 
   .left-box {
-    width: $sidebarWidth;
+    width: var(--g-sub-sidebar-width);
     height: 100%;
-    background-color: $bgDefault;
+    background-color: var(--g-background-color);
 
     img {
-      width: 100%;
-      height: 100%;
+      width: var(--g-sub-sidebar-width);
     }
   }
 
   .right-box {
     flex: 1;
-    // background: linear-gradient(to right, $bgDefault, #B5B5B6);
+    // background: linear-gradient(to right, var(--g-background-color), #B5B5B6);
 
     .header-beead {
       .collapse-wrapper {

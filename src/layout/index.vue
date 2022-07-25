@@ -16,7 +16,6 @@ import ContentLayout from "./content";
 </script>
 
 <style lang="scss" scoped>
-@import "~@/styles/variables.scss";
 .layout-wrapper {
   display: flex;
   flex-direction: column;
@@ -25,7 +24,7 @@ import ContentLayout from "./content";
   overflow: hidden;
 
   .content-wrapper {
-    height: calc(100% - #{$headerHeader});
+    height: calc(100% - var(-g-header-height));
   }
 }
 </style>

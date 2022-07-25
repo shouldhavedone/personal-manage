@@ -8,8 +8,12 @@
       <img src="../../assets/images/fullscreen-shrink.png" alt="全屏" />
       <!-- <img src="../../assets/images/fullscreen-expand.png" alt="缩小" /> -->
     </div>
-    <div><el-icon><BellFilled /></el-icon></div>
-    <div><el-icon><Sunny /></el-icon></div>
+    <div>
+      <el-icon><BellFilled /></el-icon>
+    </div>
+    <div>
+      <el-icon><Sunny /></el-icon>
+    </div>
   </div>
 </template>
 
@@ -21,17 +25,16 @@ const color = ref("409EFF");
 </script>
 
 <style lang="scss" scoped>
-@import "~@/styles/variables.scss";
 .public-operate {
   cursor: pointer;
   & > div {
-    width: $publiccIconSize;
-    height: $publiccIconSize;
+    width: var(--g-icon-size);
+    height: var(--g-icon-size);
     margin: 0 5px;
 
     .el-icon {
-      width: $publiccIconSize;
-      height: $publiccIconSize;
+      width: var(--g-icon-size);
+      height: var(--g-icon-size);
     }
 
     img {

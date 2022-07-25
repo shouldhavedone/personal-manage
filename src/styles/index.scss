@@ -1,4 +1,7 @@
+// @use "./variables.scss" as *;
 @import url(./element-ui.scss);
+@import url(./variables.scss);
+@import url(./themes.scss);
 
 * {
   &::-webkit-scrollbar {

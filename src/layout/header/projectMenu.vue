@@ -24,9 +24,8 @@ const handleSelect = (key, keyPath) => {
 </script>
 
 <style lang="scss" scoped>
-@import "~@/styles/variables.scss";
 .project-menu {
-  height: $headerHeader;
+  height: var(-g-header-height);
 
   .project-menu-list {
     height: 100%;

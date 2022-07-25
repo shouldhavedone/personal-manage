@@ -7,19 +7,15 @@
       @open="handleOpen"
       @close="handleClose"
     >
-      <!-- <el-menu-item index="2">
-        <el-icon><icon-menu /></el-icon>
-        <template #title>首页</template>
-      </el-menu-item> -->
       <transition-group name="sub-sidebar">
-        <!-- <template v-for="(route, index) in menuStore.sidebarMenus">
-          <SidebarItem
+        <template v-for="(route, index) in dynamicRoutes">
+          <sidebar-item
             v-if="route.meta.sidebar !== false"
             :key="route.path || index"
             :item="route"
             :base-path="route.path"
           />
-        </template> -->
+        </template>
       </transition-group>
     </el-menu>
   </div>
@@ -27,6 +23,11 @@
 
 <script setup>
 import { ref } from "vue";
+import SidebarItem from "./item.vue";
+
+import { dynamicRoutes } from "@/router/routes";
+
+console.log(dynamicRoutes);
 
 const isCollapse = ref(false);
 const handleOpen = (key, keyPath) => {
@@ -38,16 +39,36 @@ const handleClose = (key, keyPath) => {
 </script>
 
 <style lang="scss" scoped>
-@import "~@/styles/variables.scss";
 .sidebar-layout {
-  width: $sidebarWidth;
+  width: var(--g-sub-sidebar-width);
   height: 100%;
   overflow-y: auto;
-  background-color: $bgDefault;
 
   .el-menu-vertical {
     height: 100%;
   }
+
+  // :deep(.el-menu) {
+  //   &.menu-radius:not(.el-menu--collapse) {
+  //     .sidebar-item {
+  //       padding: 0 10px;
+
+  //       &:first-child {
+  //         padding-top: 10px;
+  //       }
+
+  //       &:last-child {
+  //         padding-bottom: 10px;
+  //       }
+  //     }
+
+  //     .el-menu--inline,
+  //     .el-menu-item,
+  //     .el-sub-menu__title {
+  //       border-radius: 10px;
+  //     }
+  //   }
+  // }
 }
 
 .sub-sidebar-enter-active {
